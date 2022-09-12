@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- google fonts -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <!-- dataTable -->
+
+    <link rel="stylesheet" type="text/css" href="../Datatables/DataTables-1.12.1/css/dataTables.bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../main.css">
+
+
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="../datatables/datatables.min.css" />
+    <!--datables estilo bootstrap 4 CSS-->
+    <link rel="stylesheet" type="text/css" href="/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="layout.css">
+    <title>Sap</title>
+</head>
+
+<body>
+    <header class="shadow">
+        <h1>SAP</h1>
+    </header>
+    <div class="wrapper">
+        <div class="sidebar shadow">
+            <ul>
+                <li class="line">
+                    <img src="../icons/colegio.svg">
+                    <a>Maestros</a>
+                </li>
+                <li class="line">
+                    <img src="../icons/profesionales 1.svg">
+                    <a href="#">Profesionales</a>
+                </li>
+                <li class="line">
+                    <img class="pa" src="../icons/medico.svg">
+                    <a href="../pacientes/paciente.html">Pacientes</a>
+                </li>
+                <li class="line">
+                    <img class="pa" src="../icons/agenda.svg">
+                    <a href=""> Agendas</a>
+                </li>
+                <li class="line">
+                    <img class="pa" src="../icons/historia.svg">
+                    <a>Historia clinicas</a>
+                </li>
+                <li class="line">
+                    <img class="pe" src="../icons/report_FILL0_wght400_GRAD0_opsz48 1.svg">
+                    <a>Reportes</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="shadow p-3">
+                <div class="filtro">
+                    <img class="filter" src="../icons/filter.svg">
+                </div>
+
+                <nav class="ver">
+                    <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                        <button class=" nav-link active " id="nav-ver-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-ver" type="button" role="tab" aria-controls="nav-ver"
+                            aria-selected="true">
+
+                            Ver / Modificar</button>
+                        <button class=" nav-link" id="nav-ingresar-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-ingresar" type="button" role="tab" aria-controls="nav-ingresar"
+                            aria-selected="false">
+                            Ingresar
+                        </button>
+                        <button class="nav-link" id="nav-carga-tab" data-bs-toggle="tab" data-bs-target="#nav-carga"
+                            type="button" role="tab" aria-controls="nav-carga" aria-selected="false">
+                            Carga en bloque
+                        </button>
+
+                        <button class="nav-link" id="nav-bloqueado-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-bloqueado" type="button" role="tab" aria-controls="nav-bloqueado"
+                            aria-selected="false">
+                            Bloqueado
+                        </button>
+
+                        <button class="nav-link" id="nav-historia-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-historia" type="button" role="tab" aria-controls="nav-historia"
+                            aria-selected="false">
+                            Historia
+                        </button>
+
+                    </div>
+                </nav>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active " id="nav-ver" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                        <div class="container-FLUID">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-responsive">
+                                        <table id="example" class="table table-striped table-bordered"
+                                            style="border: none;width: 100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>ID</th>
+                                                    <th>NOMBRE</th>
+                                                    <th>APELLIDO</th>
+                                                    <th>CEDULA</th>
+                                                    <th>EMAIL</th>
+                                                    <th>CIUDAD</th>
+                                                    <th>CELULAR</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> <input class="chek" type="checkbox"></td>
+                                                    <td>13</td>
+                                                    <td> STIRWIN</td>
+                                                    <td>castro</td>
+                                                    <td>
+                                                        <div class="tel">3202334123</div>
+                                                    </td>
+                                                    <td>stirwinqw@gmail.com</td>
+                                                    <td>cartagena</td>
+                                                    <td>$320213412</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <input class="chek" type="checkbox"></td>
+                                                    <td>213</td>
+                                                    <td> carlos</td>
+                                                    <td>castro</td>
+                                                    <td>
+                                                        <div class="tel">3202334123</div>
+                                                    </td>
+                                                    <td>stirwinqw@gmail.com</td>
+                                                    <td>cartagena</td>
+                                                    <td>$320213412</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <input class="chek" type="checkbox"></td>
+                                                    <td>313</td>
+                                                    <td> valeria</td>
+                                                    <td>castro</td>
+                                                    <td>
+                                                        <div class="tel">3202334123</div>
+                                                    </td>
+                                                    <td>stirwinqw@gmail.com</td>
+                                                    <td>cartagena</td>
+                                                    <td>$320213412</td>
+                                                    <td></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-ingresar" role="tabpanel" aria-labelledby="nav-ingresar-tab">
+                        <div class="hist_content">
+                            <div class="hist_content_form">
+                                <div class="hist_content_form_title">
+                                    <h6>INFORMACION GENERAL</h6>
+                                </div>
+                                <form class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Nombre</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Fecha de Nacimiento</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Email</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Tipo Documento</label>
+                                            <select name="document" id="document" class="form-control">
+                                                <option value=""></option>
+                                                <option value="cc">Cédula de Ciudadanía</option>
+                                                <option value="ce">Cédula de Extranjería</option>
+                                                <option value="ps">Pasaporte</option>
+                                                <option value="pep">Permiso Especial de Permanencia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Departamento</label>
+                                            <select type="text" id="departament" class="form-control">
+                                                <option value="">Seleccione Departamento</option>
+                                                <option value="ama">Amazonas</option>
+                                                <option value="ant">Antioquia</option>
+                                                <option value="ara">Arauca</option>
+                                                <option value="arc">Archipielago de San Andres, Providencia</option>
+                                                <option value="atl">Atlántico</option>
+                                                <option value="bog">Bogotá</option>
+                                                <option value="bol">Bolívar</option>
+                                                <option value="boy">Boyacá</option>
+                                                <option value="cal">Caldas</option>
+                                                <option value="caq">Caquetá</option>
+                                                <option value="cas">Casanare</option>
+                                                <option value="cau">Cauca</option>
+                                                <option value="ces">Cesar</option>
+                                                <option value="cho">Chocó</option>
+                                                <option value="cor">Córdoba</option>
+                                                <option value="cun">Cundinamarca</option>
+                                                <option value="gua">Guainía</option>
+                                                <option value="gua">Guaviare</option>
+                                                <option value="hui">Huila</option>
+                                                <option value="gua">La Guajira</option>
+                                                <option value="mag">Magdalena</option>
+                                                <option value="met">Meta</option>
+                                                <option value="nar">Nariño</option>
+                                                <option value="nor">Norte de Santander</option>
+                                                <option value="put">Putumayo</option>
+                                                <option value="qui">Quindío</option>
+                                                <option value="ris">Risaralda</option>
+                                                <option value="sana">San Andrés y Providencia</option>
+                                                <option value="sant">Santander</option>
+                                                <option value="suc">Sucre</option>
+                                                <option value="tol">Tolima</option>
+                                                <option value="val">Valle del Cauca</option>
+                                                <option value="vau">Vaupés</option>
+                                                <option value="vic">Vichada</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Ciudades</label>
+                                            <select class="form-control" id="cities"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Celular</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Genero</label>
+                                            <select name="Genero" id="Genero" class="form-control">
+                                                <option value=""></option>
+                                                <option value="mas">Masculino</option>
+                                                <option value="fem">Femenino</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Dirección</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+                                <form class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Área de trabajo</label>
+                                            <select name="area_trabajo" id="area_trabajo" class="form-control">
+                                                <option value="">Seleccione Profesión</option>
+                                                <option value="bac">Bacteriología</option>
+                                                <option value="en_aux">Enfermería auxiliar</option>
+                                                <option value="en_pro">Enfermería profesional</option>
+                                                <option value="fis">Fisioterapia</option>
+                                                <option value="fono">Fonoaudiología</option>
+                                                <option value="gero">Gerontología</option>
+                                                <option value="inye">Inyectología</option>
+                                                <option value="med_esp">Medicina especializada</option>
+                                                <option value="med_gen">Medicina general</option>
+                                                <option value="nut_die">Nutrición y dietética</option>
+                                                <option value="odon">Odontología</option>
+                                                <option value="opto">Optometría</option>
+                                                <option value="prac_med">Practicante de Medicina</option>
+                                                <option value="prac_psico">Practicante de Psicología</option>
+                                                <option value="psico">Psicología </option>
+                                                <option value="ter_ocu">Terapia ocupacional</option>
+                                                <option value="ter_res">Terapia respiratoria</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Especialidad</label>
+                                            <select name="Genero" id="Genero" class="form-control">
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Duracion de la Consulta</label>
+                                            <select name="duracion" id="duracion" class="form-control">
+                                                <option value="">Seleccione Duración</option>
+                                                <option value="">20 minutos</option>
+                                                <option value="">30 minutos</option>
+                                                <option value="">40 minutos</option>
+                                                <option value="">50 minutos</option>
+                                                <option value="">60 minutos</option>
+                                                <option value="">90 minutos</option>
+                                                <option value="">120 minutos</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Formulario registro clínico:</label>
+                                            <select name="Genero" id="Genero" class="form-control">
+                                                <option value="">Seleccione una opción</option>
+                                                <option value="">Historia Clinica Psicología Menor de Edad</option>
+                                                <option value="">Historia Clinica Psicología Mayor de Edad</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-carga" role="tabpanel" aria-labelledby="nav-carga-tab">estas
+                    </div>
+                    <div class="tab-pane fade" id="nav-bloqueado" role="tabpanel" aria-labelledby="nav-bloqueado-tab">
+                        estass
+                    </div>
+                    <div class="tab-pane fade" id="nav-historia" role="tabpanel" aria-labelledby="nav-historia-tab">
+                        estasss
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/popper/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./eventos.js"></script>
+    <script type="text/javascript" src="../Datatables/datatables.min.js"></script>
+    <script>
+        const cities = {
+            ama: ["A", "E", "V", "E"],
+            ant: ["M", "A", "E", "C"],
+            ara: ["a", "a", "a", "a"],
+
+        }
+        $('#departament').change(function (e) {
+            cities[$(this).val()].map(city => {
+                $('#cities').append(`<option value="${city}">${city}</option>`);
+            })
+        })
+
+    </script>
+</body>
+</html>
