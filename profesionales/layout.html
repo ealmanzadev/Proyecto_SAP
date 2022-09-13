@@ -380,7 +380,9 @@
     <script type="text/javascript" src="../Datatables/datatables.min.js"></script>
     <script>
         const cities = {
-            ama: ["A", "E", "V", "E"],
+            ama: ["EL ENCANTO", "LA CHORRERA", "LA PEDRERA", "LA VICTORIA", 
+            "LETICIA", "MIRITI", "PUERTO ALEGRIA", "PUERTO ARICA", "PUERTO NARIÑO", 
+            "PUERTO SANTANDER", "TARAPACA"],
             ant: ["M", "A", "E", "C"],
             ara: ["a", "a", "a", "a"],
             arc: ["d", "e", "f", "g"],
@@ -415,9 +417,14 @@
             vic: ["h", "i", "j", "k"]
         }
         $('#departament').change(function (e) {
+            let modelList = document.getElementById("cities");
+            while (modelList.options.length) {
+                modelList.remove(0);
+            }
             cities[$(this).val()].map(city => {
                 $('#cities').append(`<option value="${city}">${city}</option>`);
             })
+
         })
 
     </script>
