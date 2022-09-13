@@ -285,7 +285,9 @@
                                 <form class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-
+                                            <div class="photo">
+                                                <img src="https://www.way.com.co/convenios/no-foto.jpg" class="gambar img-responsive img-thumbnail" id="item-img-output" style="width:350px; height: 350px;">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -311,48 +313,45 @@
                                                 <option value="ter_ocu">Terapia ocupacional</option>
                                                 <option value="ter_res">Terapia respiratoria</option>
                                             </select>
+                                            <div>
+                                                <label for="">Especialidad</label>
+                                                <select name="Genero" id="Genero" class="form-control">
+    
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Duracion de la Consulta</label>
+                                                <select name="duracion" id="duracion" class="form-control">
+                                                    <option value="">Seleccione Duración</option>
+                                                    <option value="">20 minutos</option>
+                                                    <option value="">30 minutos</option>
+                                                    <option value="">40 minutos</option>
+                                                    <option value="">50 minutos</option>
+                                                    <option value="">60 minutos</option>
+                                                    <option value="">90 minutos</option>
+                                                    <option value="">120 minutos</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Formulario registro clínico:</label>
+                                                <select name="Genero" id="Genero" class="form-control">
+                                                    <option value="">Seleccione una opción</option>
+                                                    <option value="">Historia Clinica Psicología Menor de Edad</option>
+                                                    <option value="">Historia Clinica Psicología Mayor de Edad</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    Requiere Validador
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="">Especialidad</label>
-                                            <select name="Genero" id="Genero" class="form-control">
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="">Duracion de la Consulta</label>
-                                            <select name="duracion" id="duracion" class="form-control">
-                                                <option value="">Seleccione Duración</option>
-                                                <option value="">20 minutos</option>
-                                                <option value="">30 minutos</option>
-                                                <option value="">40 minutos</option>
-                                                <option value="">50 minutos</option>
-                                                <option value="">60 minutos</option>
-                                                <option value="">90 minutos</option>
-                                                <option value="">120 minutos</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="">Formulario registro clínico:</label>
-                                            <select name="Genero" id="Genero" class="form-control">
-                                                <option value="">Seleccione una opción</option>
-                                                <option value="">Historia Clinica Psicología Menor de Edad</option>
-                                                <option value="">Historia Clinica Psicología Mayor de Edad</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Default checkbox
-                                        </label>
                                     </div>
                                 </form>
+                                <div>
+                                    <button class="btn btn-inverse waves-effect waves-light ingresando" type="button" onclick="alert(2+2)" >REALIZAR OPERACIÓN</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -378,56 +377,5 @@
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="./eventos.js"></script>
     <script type="text/javascript" src="../Datatables/datatables.min.js"></script>
-    <script>
-        const cities = {
-            ama: ["El Encanto", "La Chorrera", "La Pedrera", "La Victoria", 
-            "Leticia", "Miriti", "Puerto Alegria", "Puerto Arica", "Puerto Nariño", 
-            "Puerto Ssantander", "Taparaca"],
-            ant: ["M", "A", "E", "C"],
-            ara: ["a", "a", "a", "a"],
-            arc: ["d", "e", "f", "g"],
-            atl: ["h", "i", "j", "k"],
-            bog: ["h", "i", "j", "k"],
-            bol: ["h", "i", "j", "k"],
-            boy: ["A", "E", "V", "E"],
-            cal: ["M", "A", "E", "C"],
-            caq: ["a", "a", "a", "a"],
-            cas: ["d", "e", "f", "g"],
-            cau: ["h", "i", "j", "k"],
-            ces: ["h", "i", "j", "k"],
-            cho: ["h", "i", "j", "k"],
-            cor: ["A", "E", "V", "E"],
-            cun: ["M", "A", "E", "C"],
-            guai: ["a", "a", "a", "a"],
-            guav: ["d", "e", "f", "g"],
-            hui: ["h", "i", "j", "k"],
-            gua: ["h", "i", "j", "k"],
-            met: ["h", "i", "j", "k"],
-            nar: ["A", "E", "V", "E"],
-            nor: ["M", "A", "E", "C"],
-            put: ["a", "a", "a", "a"],
-            qui: ["d", "e", "f", "g"],
-            ris: ["h", "i", "j", "k"],
-            sana: ["h", "i", "j", "k"],
-            sant: ["A", "E", "V", "E"],
-            suc: ["M", "A", "E", "C"],
-            tol: ["a", "a", "a", "a"],
-            val: ["d", "e", "f", "g"],
-            vau: ["h", "i", "j", "k"],
-            vic: ["h", "i", "j", "k"]
-        }
-        $('#departament').change(function (e) {
-            let modelList = document.getElementById("cities");
-            while (modelList.options.length) {
-                modelList.remove(0);
-            }
-            cities[$(this).val()].map(city => {
-                $('#cities').append(`<option value="${city}">${city}</option>`);
-            })
-
-        })
-
-    </script>
 </body>
-
 </html>
