@@ -415,11 +415,17 @@
             vic: ["h", "i", "j", "k"]
         }
         $('#departament').change(function (e) {
+            let modelList = document.getElementById("cities");
+            while (modelList.options.length) {
+                modelList.remove(0);
+            }
             cities[$(this).val()].map(city => {
                 $('#cities').append(`<option value="${city}">${city}</option>`);
             })
+            
         })
 
     </script>
 </body>
+
 </html>
